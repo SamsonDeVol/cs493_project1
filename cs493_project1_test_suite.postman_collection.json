@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "178419b4-45a6-442f-a68e-faf3dbdf6280",
+		"name": "cs493_project1_test_suite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25734158"
+	},
+	"item": [
+		{
+			"name": "view all businesses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/businesses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view business with id 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/businesses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add business",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"dinky\",\n    \"street_address\": \"small place\",\n    \"city\": \"medium place\",\n    \"state\": \"big place\",\n    \"zip_code\": \"zippity\",\n    \"phone_number\": \"big fat phony\",\n    \"category\": \"cat\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businesses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify business with id 1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"dinky doo doo\",\n    \"street_address\": \"small place\",\n    \"city\": \"medium place\",\n    \"state\": \"big place\",\n    \"zip_code\": \"zippity\",\n    \"phone_number\": \"big fat phony\",\n    \"category\": \"cat\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businesses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete business with id 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/businesses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add review to business with id 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"star_rating\": \"3\",\n    \"doller_sign\": \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businesses/1/addReview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"1",
+						"addReview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add photo to business with id 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photoURL\": \"someURL\",\n    \"caption\": \"someCaption\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businesses/1/addPhoto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"1",
+						"addPhoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete review with id 0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/businesses/reviews/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"reviews",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete photo with id 0",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/businesses/photos/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"photos",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify review with id 1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"star_rating\": \"1\",\n    \"doller_sign\": \"4\",\n    \"business_id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businesses/reviews/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify photo with id 0",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photoURL\": \"someURL\",\n    \"caption\": \"newCaption\",\n    \"business_id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/businesses/photos/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"photos",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
